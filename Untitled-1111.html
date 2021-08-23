@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Verdana;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #001b4d;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=Submit] {
+  background-color: #8f6b08;
+  color: #ffffff;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=Submit]:hover {
+  background-color: #192644;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=Submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div style="text-align:center">
+    <h1 style="background-color:#f1d7d7;">Contact</h2>
+    <p>Say message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="mark.png" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Nome" placeholder="Your Name...">
+        <label for="País">Country:</label>
+        <select id="País" name="País">
+          <option value="australia">Australia</option>
+          <option value="Brasil">Brazil</option>
+          <option value="Canada">Canada</option>
+        </select>
+        <label for="Submit">Submit:</label>
+        <textarea id="Submit" name="Submit" placeholder="Write.." style="height:170px"></textarea>
+        <input type="Submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
